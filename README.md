@@ -1,8 +1,7 @@
 # Simple Node Server with Babel
 
-[![Build Status](https://travis-ci.org/rwieruch/node-babel-server.svg?branch=master)](https://travis-ci.org/rwieruch/node-babel-server) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-babel-server.svg)](https://greenkeeper.io/)
-
-An easy way to get started with JavaScript on the command line. [Read more about it](https://www.robinwieruch.de/minimal-node-js-babel-setup).
+This repo created from this repository
+https://github.com/rwieruch/node-babel-server
 
 ## Features
 
@@ -12,12 +11,33 @@ An easy way to get started with JavaScript on the command line. [Read more about
 ## Requirements
 
 * [node & npm](https://nodejs.org/en/)
-* [git](https://www.robinwieruch.de/git-essential-commands/)
+* MongoDB
+
+# Development process and strategy
+
+The scope of this project is hosting a backend server by using ExpressJs in NodeJs environment and responding client's HTTP requests.
+Project created from scratch, by following some instructions.
+Some modules that I have used in this project to create this repository:
+express-generator - express generator
+nodemon - realtime server update
+passport -user authentication
+bcrypt - encryption library for session management
+babelcore - bring ecmascript standard to this Project
+babel rc
+dotenv - to use environment variables
+uuid - middleware to generate unique id's for resource ids,
+Mongoose-babel server - Use the Non-relational database like Relational database
+passport-http-bearer - middleware for passport library
+passport-stratagy
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/node-babel-server.git`
-* `cd node-babel-server`
-* `npm install`
-* `npm start`
-* optional: include *.env* in your *.gitignore*
+Clone this repository
+Install dependencies with npm install
+start your MongoDB Server
+include your .env file like:
+```
+PORT=3000
+DATABASE_URL=mongodb://localhost:27017/node-express-mongodb-server
+```
+start your server with npm start
