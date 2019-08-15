@@ -1,14 +1,24 @@
 import mongoose from 'mongoose';
 
 const taskSchema = new mongoose.Schema({
-  text: {
+  description: {
     type: String,
     required: true,
   },
-  // connection to the user. 
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  dueDate: {
+    type: Date,
+  },
+  // connection to the user.
+  //user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }
 });
 
-const Task = mongoose.model('Task', taskSchema);
+module.exports = mongoose.model('Task', taskSchema)
 
-export default Task;
+// const Task = mongoose.model('Task', taskSchema);
+//
+// export default Task;
